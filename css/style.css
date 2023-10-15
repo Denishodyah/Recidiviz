@@ -1,0 +1,837 @@
+html {
+    box-sizing: border-box;
+    
+}
+*, *::after, *::before{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: 'Public Sans', 'sans-serif';
+}
+/* предподнимаю шапку чтоб закинуть фон */
+ .header {
+    position: absolute;
+    z-index: 5;
+    left: 0;
+   right: 0;
+} 
+/* контейнер чтоб содержимое было по центру задаем боковые отступы для безопасности*/
+.container { 
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 10px;
+    
+}
+/* задаем главному диву где помещены логотип и навигация верхний отспут */
+.header__inner {
+    padding-top: 17px;
+    display: flex;
+flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+
+/* список шапки */
+.menu__list {
+    display: flex;
+    gap: 51px;
+}
+.menu__list-margin  {
+    margin-right: -18px;
+} 
+/* элементы списка */
+.menu__list-link {
+    color: #FFF;
+font-size: 13px;
+font-weight: 400;
+}
+.menu__list-link:hover,.menu__list-link:active,.menu__list-link:focus {
+opacity: 0.75;
+color: red;    
+}
+/* конец шапки сайта */
+
+
+
+/* содержимое которое относится к header */
+/* размещаем фон  */
+.header-content__top {
+background-image: url(../image/fon.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+/* делаем текст белым */
+    color: #FFF;
+    
+}
+/* стилизуем заголовок h1  */
+.header-content__title {
+    padding-top: 25%;
+margin-bottom: 29px;
+max-width: 535px; 
+
+
+font-family: Libre Baskerville;
+font-size: 38px;
+font-weight: 400;
+line-height: 44px;
+letter-spacing: 1.2px;
+}
+/* стилизуем подзаголовок */
+.header-content__subtitle {
+max-width: 542px;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 28px;
+margin-bottom: 46px;
+}
+/* стилизуем пейдж элемент */
+.header-content__bage-link {
+    display: inline-block;
+    border-radius: 80px;
+    border: 1px solid rgba(255, 255, 255, 0.30); 
+padding: 17px 33px;
+text-align: center;
+
+font-size: 13px;
+font-weight: 400;
+    margin-bottom: 122px;
+    transition: 1s;
+}
+.header-content__bage-link:hover,.header-content__bage-link:focus{
+    background-color: #3907ce;
+    color: #FFF;
+
+
+}
+.header-content__trusted {
+font-size: 15px;
+font-weight: 400;
+margin-bottom: 33px;
+}
+
+
+/* grid  с городами*/
+.grid__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    grid-gap: 50px;
+    padding-bottom: 50px;
+}
+.city {
+    border-top: 1px solid  rgba(255, 255, 255, 0.60);
+    width: 165px;
+    padding-top: 17px;
+
+font-size: 15px;
+font-weight: 400;
+}
+
+/* конец первого блока с хедером и основным содержимом */
+
+
+
+
+/* блок с информации о компании */
+.about__company {
+    padding-top: 120px;
+}
+
+.about__company-title {
+    margin: 0 auto 57px;
+    color: #003331;
+    max-width: 717px;
+    text-align: center;
+    font-family: Libre Baskerville;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 38px;
+    letter-spacing: 1.2px;
+}
+
+
+
+/* делаем отступы у блоков обращаемся к главному блоку где внутри него лежат блоки   */
+.block-about {
+    max-width: 760px;
+    padding: 0 10px;
+    margin: 57px auto 117px;
+     display: flex;
+     gap: 12px;
+}
+/* применяем не стандартное свойство чтоб выравнить между собой элемент с цифрой и текст */
+.block-about__start {
+    text-align: -webkit-center;
+}
+/* стилизуем цифрой с беграундом  */
+.block-about__number {
+    width: 48px;
+  height: 48px;
+background: #014C48;
+  border-radius:50%;
+  color:white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  margin-bottom: 19px;
+
+}
+/* стилизуем текст */
+.block-about__text {
+    max-width: 110px;
+    color: rgba(53, 83, 98, 0.80);
+font-size: 15px;
+font-weight: 400;
+line-height: 24px;
+}
+/* стилизуем линию */
+.block-about__line {
+    border-top: 1px solid  rgba(53, 83, 98, 0.20);
+    width: 176px;
+    height: 1px;
+    margin-top: 6%;
+}
+
+/* задаем ширину для центрального  текста чтоб были отступы в тексте */
+.block-about__center {
+    max-width: 119px;
+}
+/* делаем то же самое для правого текста */
+.block-about__right {
+    max-width: 126px;
+}
+
+/*_----------------- конец 2 блока--- */
+
+/* начало блока об успехе компании */
+/* задаем фон  */
+.success-company {
+    background: #F7F8F8;
+}
+/* блоку в котором два блока даем отступы и делаем флекс контейнером разделив два блока с помощью свойства space-between и свойство flex-wrap:wpap для того при заполнение контейнера элементы перемещались на другую строку */
+.success-company__content {
+    padding: 80px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+/* левому блоку даем верхний отступ согласну макету */
+.success-company__left-block {
+    padding-top: 5%;
+    
+}
+/* стилизуем заголовок */
+.success-company__title {
+    color: #003331;
+font-size: 22px;
+font-weight: 400;
+line-height: 22px;
+margin-bottom: 13px;
+}
+/* стилизуем подзаголовок */
+.success-company__subtitle {
+    max-width: 449px;
+    color: rgba(53, 83, 98, 0.80);
+font-size: 15px;
+font-weight: 400;
+line-height: 24px;
+margin-bottom: 54px;
+}
+/* стилизуем бейдж элемент */
+.success-company__beig {
+    display: inline-block;
+    border-radius: 80px;
+border: 1px solid rgba(53, 83, 98, 0.20);
+padding: 17px 33px;
+
+
+color: #00413E;
+font-size: 13px;
+font-weight: 400;
+margin-bottom: 1%;
+transition: 2s;
+}
+.success-company__beig:hover{
+    background-color: #3907ce;
+    color: red;
+}
+
+/* делаем флекс правый блок с фотографиями даем отступы */
+.success-company__right-block {
+    display: flex;
+    gap: 8px;
+}
+/* задаем ширину первой фотографии   */
+.photo1 {
+width: 235px;
+
+}
+/* задаем ширину второй фотографии */
+.photo2 {
+ width: 317px;
+}
+/* конец блока об успехе компании */
+
+
+/* блок с логотипами компании */
+/* задаем отспупы главному блоку */
+.logos-company{
+    padding: 24px 0;
+}
+/* создаем грид сетку */
+.logos-company__grid-block {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+}
+/*задаем в какие колонки займет элемент*/
+.logos-company__item {
+    grid-column: 2 span;
+}
+/* стилизуем текст и делаем верхний бордер */
+.logos-company__text {
+    /*даем дисплей блок для корекктного отображение логотипов  */
+    display: block;
+    border-top: 1px solid rgba(53,83,98,.3);
+    width: 165px;
+    padding-top: 16px;
+    padding-left: 32px;
+    color: rgba(53, 83, 98, 0.80);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    /* задаем позицию логотипам и размер */
+    background-position: left top 15px;
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    transition: 1s;
+
+
+}
+.logos-company__text:hover,.logos-company__text:focus,.logos-company__text:active{
+color: rgb(176, 2, 2);
+}
+/* добавляем текстам логотипы */
+.logos-company__ted {
+    background-image: url(../image/ted.png);
+}
+.logos-company__new-york {
+    background-image: url(../image/new-york.png);
+}
+.logos-company__state {
+    background-image: url(../image/state.png);
+}
+.logos-company__ap {
+    background-image: url(../image/ap.png)
+}
+.logos-company__time {
+    background-image: url(../image/time.png);
+}
+.logos-company__ft {
+    background-image: url(../image/freethink.png);
+}
+/* конец блока с логотипами компаниии */
+
+
+/* начало блока увидить лес и деоевья превод жо словно */
+/* секцию делаем  дисплей флекс и задаем высоту секции */
+.see-the-forest{
+    display: flex;
+    height: 680px;
+    background-color: #001414;;
+}
+/* добавляем фон до секции,фону задаем ширину и высоту  */
+.see-the-forest::before {
+    content: "";
+    background-image: url(../image/spectr1.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 287px;
+    height: 100%;
+}
+/* добавлем фон после секции, фону задаем ширину и высоту */
+.see-the-forest::after{
+    content: "";
+    background-image: url(../image/spectr2.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 287px;
+    height: 100%;
+}
+/* блоку в котором лежит еще один блок с текстом 
+делаем флекс контейнером 
+задаем flex-grow 1 для того чтобы вырастал флекс элемент
+центрируем внутренний блок и помещаем по центр
+задаем по бокам бордеры для разделение фона и элементов 
+задаем падинг 
+и задаем высоту
+*/
+.block-the-forest {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid  #001414;
+    border-left: 1px solid  #001414;
+    padding: 0 82px;
+    height: 100%;
+}
+/* стилизуем заголовок */
+.block-the-forest__title {
+    color: #FFF;
+font-size: 22px;
+font-weight: 400;
+margin-bottom: 21px;
+}
+/* стилизуем подзаголовок */
+.block-the-forest__subtitle {
+    max-width: 542px;
+    color: #FFF;
+font-size: 15px;
+font-weight: 400;
+line-height: 24px;
+}
+/* конец блока о видение леса и деревьев */
+
+
+/* начало блока логотипами партнеров 
+зададим отстпупы*/
+.partners {
+    padding: 16px 0;
+}
+
+.container-logo {
+    max-width: 1177px;
+    margin: 0 auto;
+}
+/* главному блоку диву задем флекс и отступы и центрируем */
+
+.partners__block {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+/* стилизуем заголовок находящейся слева от логтипов */
+.partners__title {
+    color: rgba(53, 83, 98, 0.60);
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 16px; 
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+/* блоку списка в котором логотипы делаем флекс задаем отступы между собой
+ */
+.partners__logotips {
+    display: flex;
+    gap: 13px;
+    flex-wrap: wrap;
+}
+/* шзадаем ширину логотипов */
+.logo-comp {
+    width: 165px;
+    
+}
+/* стилизуем ссылку находящейся справа от логотипов */
+.partner-more{
+    color: rgba(53, 83, 98, 0.60);
+font-size: 11px;
+font-weight: 400;
+line-height: 16px;
+letter-spacing: 0.5px;
+text-transform: uppercase;
+transition: 1s;
+}
+.partner-more:hover {
+    color: red;
+}
+/* конец блока с логотипами партнеров */
+/* начало фона статистики */
+.grafic {
+    width: 100%;
+    background-color: #f4f5f5;
+}
+ 
+/* конец фона статистки */
+
+
+/* начало блока с информации */
+/* зададим секции фон и поднимем его верх */
+.information {
+    margin-top: -5px;
+    background-color: #f4f5f5;
+}
+/* главному блоку в котором два других блока сделаем грид сетку из 12 */
+.information__glav-block {
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+}
+/*левому блоку зададим положение какие столбцы он должен умещатся  */
+.information__left-block{
+    grid-column: 6 span;
+}
+/* стилизуем загаловок в левом блоке */
+.information__title {
+    color: #003331;
+    font-family: Libre Baskerville;
+    font-size: 31px;
+    font-weight: 400;
+    line-height: 38px;
+    letter-spacing: 1.2px;
+    max-width: 424px;
+}
+/* правому блоку сделаем свою грид сетку 6 колонок 
+дадим отступ с низу от других колонок спомощью row-gap */
+.information__list {
+    display: grid;
+    grid-column: 7/6 span;
+    grid-template-columns: repeat(auto-fit, minmax(42px, 1fr));
+    row-gap: 36px;
+    margin-bottom: 141px;
+}
+/* установим положение элементов в сетке */
+.information__item {
+    grid-column: 3 span;
+}
+/* стилизуем заголовки */
+.information__subtitle {
+    color: #003331;
+font-size: 15px;
+font-weight: 400;
+line-height: 24px; 
+}
+/* стилизуем подзаголовки */
+.information__descr {
+    color: rgba(53, 83, 98, 0.80);
+font-size: 15px;
+font-weight: 400;
+line-height: 24px; 
+}
+/* зададим текстам максимальную ширину */
+.information__max-width1 {
+max-width: 248px;
+}
+.information__max-width2 {
+max-width: 263px;
+}
+.information__max-width3 {
+max-width: 256px;
+}
+.information__max-width4 {
+max-width: 256px;
+}
+/* конец блока с информации */
+/* начало блока новости компании*/
+/* делаем верхней отступ для верхнего контента */
+.news {
+    padding-top: 88px;
+}
+/* делаем блок флекс и раскидываем по сторонам 
+даем нижний отступ */
+.news-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 33px;
+}
+/* стилизуем левый текст */
+.news__press {
+    color: #003331;
+font-family: Libre Baskerville;
+font-size: 27px;
+font-weight: 400;
+line-height: 38px;
+}
+/* стилизуем бейдж */
+.btn{
+    border-radius: 80px;
+border: 1px solid rgba(53, 83, 98, 0.20);
+padding: 17px 33px;
+}
+.news__link {
+    color: #00413E;
+font-size: 13px;
+font-weight: 400;
+transition: 1s;
+}
+.news__link:hover,.news__link:focus {
+background-color: #008b85;
+color: rgb(221, 5, 5);
+}
+
+
+/* создаем список и далем грид сетку из 12 
+даем нижний отступ и боковой и 
+даем самому блоку нижний отступ*/
+.news__list-company {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(42px, 1fr));
+    ;
+row-gap: 32px;
+column-gap: 32px;
+margin-bottom: 132px;
+}
+/*  задаём размер и положение элемента, находящегося внутри грид-колонки */
+.news__item{
+    grid-column: 4 span;
+    
+}
+/* карточки позиционируем
+задаем верхний бордер и отстпуп
+задаем минимальную высоту карточек */
+.news-card {
+    position: relative;
+    border-top: 1px solid rgba(53, 83, 98, 0.30);
+    padding-top: 16px;
+    min-height: 145px;
+}
+/* блок внутри корого изображение и текст делаем флекс
+цетрируем
+задаем нижний отступ
+и задаем отступы  между колонками и рядами */
+.news-card__top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 11px;
+    gap: 16px;
+}
+/* блоку в котором только логотип  и рядом сним расшифрофка
+задаем отступы и стилизуем текст */
+.news-card__author {
+text-transform: uppercase;
+display: block;
+margin: -18px 0;
+    padding: 18px 0;
+    padding-left: 32px;
+    color: rgba(53, 83, 98, 0.80);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    /* задаем позицию логотипам и размер */
+    background-position: left top 15px;
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+}
+/* стилизуем даты */
+.news-card__date {
+    color: rgba(53, 83, 98, 0.60);
+font-size: 11px;
+font-weight: 400;
+line-height: 16px; 
+text-transform: uppercase;
+}
+/* стилизуем заголовки под логотипами */
+.news-card__title {
+    color: #00413E;
+font-size: 17px;
+font-weight: 400;
+line-height: 24.65px; 
+}
+/* стилизуем ссылки и говорим чтоб он брал стилизациб у родителя*/
+.news-card__link{
+color: inherit;
+transition: 1s;
+}
+.news-card__link:focus,.news-card__link:hover,.news-card__link:active{
+color: red;
+}
+/* карточка добавляем логтипы компании */
+.news-card__author--ted {
+    background-image: url(../image/ted.png);
+}
+.news-card__author--coornews {
+    background-image: url(../image/cor-news.png);
+}
+.news-card__author--dj {
+    background-image: url(../image/departjus.png);
+}
+.news-card__author--ny {
+    background-image: url(../image/new-york.png);
+}
+.news-card__author--c1 {
+    background-image: url(../image/c1.png);
+}
+.news-card__author--rc {
+    background-image: url(../image/right-crime.png);
+}
+/* конец блока новости компании */
+/* начало блока текст с картой 
+даем фон и минимальную высоту
+*/
+.where-map {
+    background: #001F1F;
+  min-height: 100vh;
+}
+/* главному блоку делаем флекс и разделяем м помощью спейс битвин и даем верхний и нижний отступ */
+.where-map__glav {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 146px;
+    padding-bottom: 133px;
+    flex-wrap: wrap;
+}
+/* стилизуем левый заголовок */
+.where-map__title {
+    color: #FAFAFA;
+font-family: Libre Baskerville;
+font-size: 36px;
+font-weight: 400;
+line-height: 52px; 
+letter-spacing: 1.2px;
+margin-bottom: 43px;
+}
+/* стилизуем подзаголовок */
+.where-map__subtitle {
+    max-width: 326px;
+    color: #FAFAFA;
+font-size: 18px;
+font-weight: 400;
+line-height: 28px; 
+margin-bottom: 53px;
+}
+/* стилизуем бейдж */
+.where-map__beig {
+
+    border-radius: 80px;
+    background: #00665F;
+    padding: 16px 32px;
+
+    color: #FFF;
+text-align: center;
+font-size: 14px;
+font-weight: 400;
+line-height: 20px;
+transition: 1s;
+
+}
+.where-map__beig:focus,.where-map__beig:hover,.where-map__beig:active {
+    border: none;
+    color: #f9f9f9;
+    background-color: #b407ce;
+}
+/* конец блока с текстом и картой */
+
+
+/* начало подвала сайта */
+/* даем фон верхней части подвала */
+.footer-fon {
+    background: #001414;
+}
+/* главный блок верхней части
+делаем флекс 
+даем отчтупы с верху снизу и по бокам */
+.footer-top {
+    padding-top: 112px;
+    padding-bottom: 137px;
+display: flex;
+flex-wrap: wrap;
+gap: 134px;
+}
+/* в блоке заголовкам указываем позицию и даем отступы
+стилизуем заголовок  */
+.footer-company__title {
+    position: relative;
+    margin: 0 0 23px;
+    padding-bottom: 24px;
+    color: #7D9798;
+font-size: 11px;
+font-weight: 400;
+line-height: 16px;
+letter-spacing: 1px;
+text-transform: uppercase;
+}
+/* делаем линию с помощью афтер
+указываем ему отступы и позиционеруем*/
+.footer-company__title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 16px;
+    height: 1px;
+    background-color: #25b895;
+
+}
+/* стилизуем список*/
+.footer-company__list {
+    color: #EDECEB;
+font-size: 15px;
+font-weight: 400;
+line-height: 30px; 
+transition: 1s;
+}
+.footer-company__list:focus,.footer-company__list:hover,.footer-company__list:active{
+    color: #ef2c00; 
+}
+.footer-top__network {
+    padding-left: 26%;
+}
+
+
+
+
+/* даем фон нижний части подвала */
+.footer-bottom {
+    background: #000F0F;
+}
+
+/* главному блоку делаем флекс даем отступы и разделяем два блока по краям */
+.footer-bottom-glav {
+    padding-top: 45px;
+    padding-bottom: 63px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* список делаем флекс чтоб элементы встали в одну строчку даем боковые отступы */
+.footer-bottom__list {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+/* стилизуем сам текст списка */
+.footer-bottom__item {
+    color: #E5ECEC;
+font-size: 10px;
+font-weight: 400;
+line-height: 10px;
+transition: 1s; 
+}
+.footer-bottom__item:focus,.footer-bottom__item:hover,.footer-bottom__item:active {
+color: #ef2c00;    
+
+}
+/* делаем флекс в котором указана дата и текст */
+.footer-bottom__block-right {
+    display: flex;
+    gap: 10px;
+}
+/* стилизуем текст с датой */
+.footer-bottom__right {
+    color: #E5ECEC;
+font-size: 9px;
+font-weight: 400;
+line-height: 10px; 
+}
+/* стилизуем второй текст */
+.footer-bottom__right2 {
+    color: #E5ECEC;
+font-size: 10px;
+font-weight: 400;
+line-height: 10px;
+}
